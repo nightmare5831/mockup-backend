@@ -25,8 +25,6 @@ services:
         sync: false
       - key: STRIPE_WEBHOOK_SECRET
         sync: false
-      - key: HUGGINGFACE_TOKEN
-        sync: false
       - key: PIAPI_API_KEY
         sync: false
       - key: EMAIL_ADDRESS
