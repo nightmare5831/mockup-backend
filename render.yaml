@@ -1,0 +1,47 @@
+services:
+  - type: web
+    name: ai-mockup-backend
+    env: python
+    buildCommand: pip install -r requirements.txt && prisma generate && prisma py fetch --force
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      - key: BASE_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: STRIPE_PUBLISHABLE_KEY
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: HUGGINGFACE_TOKEN
+        sync: false
+      - key: PIAPI_API_KEY
+        sync: false
+      - key: EMAIL_ADDRESS
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_S3_BUCKET
+        sync: false
+      - key: AWS_REGION
+        sync: false
+    disk:
+      name: ai-mockup-uploads
+      mountPath: /opt/render/project/src/uploads
+      sizeGB: 10
