@@ -9,10 +9,6 @@ services:
         sync: false
       - key: DIRECT_URL
         sync: false
-      - key: SUPABASE_URL
-        sync: false
-      - key: SUPABASE_ANON_KEY
-        sync: false
       - key: SECRET_KEY
         sync: false
       - key: BASE_URL
@@ -24,8 +20,6 @@ services:
       - key: STRIPE_SECRET_KEY
         sync: false
       - key: STRIPE_WEBHOOK_SECRET
-        sync: false
-      - key: HUGGINGFACE_TOKEN
         sync: false
       - key: PIAPI_API_KEY
         sync: false

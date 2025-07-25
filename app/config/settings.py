@@ -19,8 +19,6 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = Field(env="DATABASE_URL")
     DIRECT_URL: str = Field(env="DIRECT_URL")
-    SUPABASE_URL: str = Field(env="SUPABASE_URL")
-    SUPABASE_ANON_KEY: str = Field(env="SUPABASE_ANON_KEY")
     
     # Redis (optional)
     REDIS_URL: Optional[str] = Field(default=None, env="REDIS_URL")
@@ -37,9 +35,6 @@ class Settings(BaseSettings):
     STRIPE_WEBHOOK_SECRET: str = Field(env="STRIPE_WEBHOOK_SECRET")
     
     # AI/GPU Processing
-    HUGGINGFACE_TOKEN: str = Field(env="HUGGINGFACE_TOKEN")
-    RUNPOD_API_KEY: str = Field(default="", env="RUNPOD_API_KEY")
-    AWS_EC2_INSTANCE_ID: str = Field(default="", env="AWS_EC2_INSTANCE_ID")
     PIAPI_API_KEY: Optional[str] = Field(default=None, env="PIAPI_API_KEY")
     
     # Email (nodemailer-style configuration with Gmail)
