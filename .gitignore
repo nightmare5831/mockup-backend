@@ -12,6 +12,7 @@ logo-placement-app
 .Python
 build/
 develop-eggs/
+!static/dist/
 downloads/
 eggs/
 .eggs/
